@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net http://dozer.sourceforge.net/schema/beanmapping.xsd">
+	
+	<mapping map-null="false">
+		<class-a >com.ifli.mbcp.domain.Lead</class-a>
+		<class-b>com.ifli.mbcp.vo.LeadVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.vo.CustomerDetailsVO</class-a>
+		<class-b>com.ifli.mbcp.domain.CustomerDetails</class-b>
+		<field-exclude type="one-way" >
+		<a>customerAddress</a>
+		<b>customerAddress</b>
+		</field-exclude>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.NeedsAnalysis</class-a>
+		<class-b>com.ifli.mbcp.vo.NeedsAnalysisVO</class-b>
+	</mapping>
+	
+	<!-- 
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.CustomerAddress</class-a>
+		<class-b>com.ifli.mbcp.vo.CustomerAddressVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.ExistingInsurance</class-a>
+		<class-b>com.ifli.mbcp.vo.ExistingInsuranceVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.State</class-a>
+		<class-b>com.ifli.mbcp.vo.StateVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.City</class-a>
+		<class-b>com.ifli.mbcp.vo.CityVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.LeadStatus</class-a>
+		<class-b>com.ifli.mbcp.vo.LeadStatusVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.Channel</class-a>
+		<class-b>com.ifli.mbcp.vo.ChannelVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.BMRMCode</class-a>
+		<class-b>com.ifli.mbcp.vo.BMRMCodeVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.LeadGeneratorCode</class-a>
+		<class-b>com.ifli.mbcp.vo.LeadGeneratorCodeVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.InsurancePlan</class-a>
+		<class-b>com.ifli.mbcp.vo.InsurancePlanVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.PremiumFrequency</class-a>
+		<class-b>com.ifli.mbcp.vo.PremiumFrequencyVO</class-b>
+	</mapping>
+	
+ 	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.MaritalStatus</class-a>
+		<class-b>com.ifli.mbcp.vo.MaritalStatusVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.BDMCode</class-a>
+		<class-b>com.ifli.mbcp.vo.BDMCodeVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.LeadCategory</class-a>
+		<class-b>com.ifli.mbcp.vo.LeadCategoryVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.LeadType</class-a>
+		<class-b>com.ifli.mbcp.vo.LeadTypeVO</class-b>
+	</mapping>
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.TaskType</class-a>
+		<class-b>com.ifli.mbcp.vo.TaskTypeVO</class-b>
+	</mapping> -->
+</mappings>

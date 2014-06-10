@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<portlet-app
+	version="2.0"
+	xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+>
+	<portlet>
+		<portlet-name>need-analysis-portlet</portlet-name>
+		<display-name>need-analysis-portlet</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/spring/need-analysis-portlet-context.xml</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>need-analysis-portlet</title>
+			<short-title>need-analysis-portlet</short-title>
+			<keywords>need-analysis-portlet</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>selectedLeadId</supported-public-render-parameter>
+		
+	</portlet>
+	<public-render-parameter>
+		<description>Shares the Selected Lead Id in Search results with Other
+			Portlets Interested in this
+		</description>
+		<identifier>selectedLeadId</identifier>
+		<qname xmlns:x="http://www.ifli.com/mbcp/public-render-parameters">x:selectedLeadId</qname>
+	</public-render-parameter>
+</portlet-app>

@@ -1,0 +1,891 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <table name="tbl_lookup_address_type">
+    <column>addressTypeId</column>
+    <column>addressTypeDescription</column>
+    <column>addressTypeName</column>
+    <row>
+      <value>1</value>
+      <null/>
+      <value>Permanent</value>
+    </row>
+    <row>
+      <value>2</value>
+      <null/>
+      <value>Communication</value>
+    </row>
+  </table>
+  <table name="tbl_lookup_city">
+    <column>cityId</column>
+    <column>cityName</column>
+    <row>
+      <value>1</value>
+      <value>Bangalore</value>
+    </row>
+    <row>
+      <value>2</value>
+      <value>Hyderabad</value>
+    </row>
+    <row>
+      <value>3</value>
+      <value>Pune</value>
+    </row>
+  </table>
+  <table name="tbl_lookup_state">
+    <column>stateId</column>
+    <column>stateCode</column>
+    <column>stateName</column>
+    <row>
+      <value>1</value>
+      <value>AP</value>
+      <value><![CDATA[Andhra Pradesh]]></value>
+    </row>
+    <row>
+      <value>2</value>
+      <value>MH</value>
+      <value>Maharashtra</value>
+    </row>
+    <row>
+      <value>3</value>
+      <value>KA</value>
+      <value>Karnataka</value>
+    </row>
+  </table>
+  <table name="tbl_address">
+    <column>customerAddressId</column>
+    <column>addressLine1</column>
+    <column>addressLine2</column>
+    <column>addressLine3</column>
+    <column>pinCode</column>
+    <column>addressTypeId</column>
+    <column>cityId</column>
+    <column>stateId</column>
+    <row>
+      <value>1</value>
+      <value><![CDATA[Bhau Patil Road]]></value>
+      <value>Aundh</value>
+      <value><![CDATA[Old Sangvi]]></value>
+      <value>560037</value>
+      <value>1</value>
+      <value>2</value>
+      <value>2</value>
+    </row>
+  </table>
+  <table name="tbl_lookup_educational_qualifications">
+    <column>educationalQualificationId</column>
+    <column>description</column>
+    <column>name</column>
+  </table>
+  <table name="tbl_lookup_ltrf">
+    <column>ltrfId</column>
+    <column>ageCeiling</column>
+    <column>ageFloor</column>
+    <column>ltrfDesc</column>
+    <column>ltrfTierName</column>
+    <column>sumCeiling</column>
+    <column>sumFloor</column>
+  </table>
+  <table name="tbl_lookup_marital_status">
+    <column>maritalStatusId</column>
+    <column>maritalStatusName</column>
+    <row>
+      <value>1</value>
+      <value>Single</value>
+    </row>
+    <row>
+      <value>2</value>
+      <value>Married</value>
+    </row>
+    <row>
+      <value>3</value>
+      <value>Widow</value>
+    </row>
+  </table>
+  <table name="tbl_occupation">
+    <column>occupationId</column>
+    <column>occupationDesc</column>
+    <column>occupationName</column>
+  </table>
+  <table name="tbl_lookup_person_type">
+    <column>personTypeId</column>
+    <column>personTypeName</column>
+    <row>
+      <value>1</value>
+      <value><![CDATA[Assured Person]]></value>
+    </row>
+    <row>
+      <value>2</value>
+      <value>Customer</value>
+    </row>
+    <row>
+      <value>3</value>
+      <value>Nominee</value>
+    </row>
+  </table>
+  <table name="tbl_spouse">
+    <column>spouseId</column>
+    <column>annualIncome</column>
+    <column>dateOfBirth</column>
+    <column>firstName</column>
+    <column>gender</column>
+    <column>lastName</column>
+    <column>middleName</column>
+    <column>natureOfOccupation</column>
+    <column>panCard</column>
+    <column>salutation</column>
+    <column>sourceOfIncome</column>
+    <column>weddingAnniversary</column>
+    <column>maritalStatusId</column>
+    <column>occupationId</column>
+    <column>personTypeId</column>
+  </table>
+  <table name="tbl_assured_person">
+    <column>assuredPersonId</column>
+    <column>annualIncome</column>
+    <column>anticipatedValueOfInsurance</column>
+    <column>assuredEmailAddress</column>
+    <column>assuredIdentificationMarks</column>
+    <column>assuredMobileNumber</column>
+    <column>assuredPhotograph</column>
+    <column>assuredProposalStartDate</column>
+    <column>assuredSignature</column>
+    <column>assuredTelephoneNumber</column>
+    <column>bankAccountNumber</column>
+    <column>bankAccountType</column>
+    <column>bankBranch</column>
+    <column>bankName</column>
+    <column>employerSchemeInsurance</column>
+    <column>firstName</column>
+    <column>isAssuredAnEmployeeOfIFLI</column>
+    <column>isSelfEmployed</column>
+    <column>lastName</column>
+    <column>lengthOfService</column>
+    <column>middleName</column>
+    <column>natureOfOccupation</column>
+    <column>panCard</column>
+    <column>personalContribution</column>
+    <column>retirementAge</column>
+    <column>salutation</column>
+    <column>sourceOfIncome</column>
+    <column>tpaAuthorizationCode</column>
+    <column>educationalQualificationId</column>
+    <column>ltrfId</column>
+    <column>maritalStatusId</column>
+    <column>occupationId</column>
+    <column>spouseId</column>
+  </table>
+  <table name="tbl_lookup_plan_type">
+    <column>planTypeId</column>
+    <column>planTypeDescription</column>
+    <column>planTypeName</column>
+    <row>
+      <value>1</value>
+      <null/>
+      <value>ULIP</value>
+    </row>
+    <row>
+      <value>2</value>
+      <null/>
+      <value>PHILIP</value>
+    </row>
+  </table>
+  <table name="tbl_lookup_insurance_plan">
+    <column>planId</column>
+    <column>planDescription</column>
+    <column>planName</column>
+    <column>planTypeId</column>
+    <row>
+      <value>1</value>
+      <value><![CDATA[Plan desc1]]></value>
+      <value><![CDATA[Jeevan Suraksha]]></value>
+      <value>1</value>
+    </row>
+    <row>
+      <value>2</value>
+      <value><![CDATA[Plan Desc2]]></value>
+      <value><![CDATA[My Life]]></value>
+      <value>2</value>
+    </row>
+  </table>
+  <table name="tbl_lookup_language">
+    <column>languageId</column>
+    <column>languageDesc</column>
+    <column>languageCode</column>
+    <row>
+      <value>1</value>
+      <value>English</value>
+      <value>en_US</value>
+    </row>
+    <row>
+      <value>2</value>
+      <value>Hindi</value>
+      <value>hi_IN</value>
+    </row>
+  </table>
+  <table name="tbl_audiovideo">
+    <column>audioVideoId</column>
+    <column>type</column>
+    <column>url</column>
+    <column>urlType</column>
+    <column>languageId</column>
+    <column>planId</column>
+    <row>
+      <value>1</value>
+      <value>1</value>
+      <value>http://indiafirstlife.com/AudioVisual/ProductAV/SimpleBenefitPlan/Simple_Benefit_Plan_Part_1-English.flv</value>
+      <value>av</value>
+      <value>1</value>
+      <value>1</value>
+    </row>
+    <row>
+      <value>2</value>
+      <value>1</value>
+      <value>http://indiafirstlife.com/AudioVisual/ProductAV/MahaJeevanPlan/Mahajeevan_Plan_English_Product_Details.flv</value>
+      <value>av</value>
+      <value>2</value>
+      <value>2</value>
+    </row>
+    <row>
+      <value>3</value>
+      <value>1</value>
+      <value>http://www.indiafirstlife.com/downloadPDF/DownloadFormsBrochures/Flipchart/Hindi/Understanding_Life_Insurance.pdf</value>
+      <value>fc</value>
+      <value>1</value>
+      <value>1</value>
+    </row>
+  </table>
+  <table name="tbl_lookup_relationship">
+    <column>relationshipId</column>
+    <column>relationshipDesc</column>
+    <column>relationshipName</column>
+    <row>
+      <value>1</value>
+      <null/>
+      <value>Father</value>
+    </row>
+    <row>
+      <value>2</value>
+      <null/>
+      <value>Mother</value>
+    </row>
+    <row>
+      <value>3</value>
+      <null/>
+      <value>Spouse</value>
+    </row>
+  </table>
+  <table name="tbl_child">
+    <column>childId</column>
+    <column>dateOfBirth</column>
+    <column>firstName</column>
+    <column>lastName</column>
+    <column>middleName</column>
+    <column>salutation</column>
+    <column>relationshipId</column>
+  </table>
+  <table name="tbl_claimants">
+    <column>claimantId</column>
+    <column>dateOfBirth</column>
+    <column>firstName</column>
+    <column>lastName</column>
+    <column>middleName</column>
+    <column>salutation</column>
+    <column>relationshipId</column>
+  </table>
+  <table name="tbl_lookup_claim_status">
+    <column>claimStatusId</column>
+    <column>claimStatusDesc</column>
+    <column>claimStatusName</column>
+  </table>
+  <table name="tbl_lookup_payment_type">
+    <column>paymentTypeId</column>
+    <column>paymentTypeDescription</column>
+    <column>paymentTypeName</column>
+    <row>
+      <value>1</value>
+      <null/>
+      <value>Cash</value>
+    </row>
+    <row>
+      <value>2</value>
+      <null/>
+      <value><![CDATA[Credit Card]]></value>
+    </row>
+    <row>
+      <value>3</value>
+      <null/>
+      <value>Cheque</value>
+    </row>
+  </table>
+  <table name="tbl_lookup_policy_type">
+    <column>policyTypeId</column>
+    <column>policyTypeDesc</column>
+    <column>policyTypeName</column>
+    <row>
+      <value>1</value>
+      <null/>
+      <value><![CDATA[PT 1]]></value>
+    </row>
+    <row>
+      <value>2</value>
+      <null/>
+      <value><![CDATA[PT 2]]></value>
+    </row>
+  </table>
+  <table name="tbl_premium">
+    <column>premiumId</column>
+    <column>paymentNotes</column>
+    <column>premiumAmount</column>
+    <column>premiumPaymentDate</column>
+    <column>paymentTypeId</column>
+  </table>
+  <table name="tbl_premium_payer">
+    <column>payerId</column>
+    <column>dateOfBirth</column>
+    <column>firstName</column>
+    <column>lastName</column>
+    <column>middleName</column>
+    <column>panCard</column>
+    <column>salutation</column>
+  </table>
+  <table name="tbl_lookup_premium_frequency">
+    <column>premiumFrequencyId</column>
+    <column>premiumFrequencyName</column>
+    <row>
+      <value>1</value>
+      <value>Monthly</value>
+    </row>
+    <row>
+      <value>2</value>
+      <value>Yearly</value>
+    </row>
+    <row>
+      <value>3</value>
+      <value>Quarterly</value>
+    </row>
+  </table>
+  <table name="tbl_lookup_bdm_code">
+    <column>bdmCodeId</column>
+    <column>bdmCodeDescription</column>
+    <column>bdmCodeName</column>
+    <row>
+      <value>1</value>
+      <value><![CDATA[BDM Code Desc1]]></value>
+      <value>BDMC1</value>
+    </row>
+    <row>
+      <value>2</value>
+      <value><![CDATA[BDM Code Desc2]]></value>
+      <value>BDMC2</value>
+    </row>
+  </table>
+  <table name="tbl_lookup_bmrm_code">
+    <column>bmRmCodeId</column>
+    <column>bmRmCodeName</column>
+    <row>
+      <value>1</value>
+      <value><![CDATA[BMRM C1]]></value>
+    </row>
+    <row>
+      <value>2</value>
+      <value><![CDATA[BMRM C2]]></value>
+    </row>
+  </table>
+  <table name="tbl_lookup_branch_code">
+    <column>branchCodeId</column>
+    <column>branchCodeDescription</column>
+    <column>branchCodeName</column>
+    <row>
+      <value>1</value>
+      <value><![CDATA[Branch Code1]]></value>
+      <value>BC1</value>
+    </row>
+    <row>
+      <value>2</value>
+      <value><![CDATA[Branch Code2]]></value>
+      <value>BC2</value>
+    </row>
+  </table>
+  <table name="tbl_lookup_channel">
+    <column>channelId</column>
+    <column>channelDescription</column>
+    <column>channelName</column>
+    <row>
+      <value>1</value>
+      <null/>
+      <value>CH1</value>
+    </row>
+    <row>
+      <value>2</value>
+      <null/>
+      <value>CH2</value>
+    </row>
+  </table>
+  <table name="tbl_lookup_kind_of_lead">
+    <column>kindOfLeadId</column>
+    <column>leadPrefix</column>
+    <column>kindOfLeadName</column>
+    <row>
+      <value>1</value>
+      <value>IL</value>
+      <value>IND</value>
+    </row>
+    <row>
+      <value>2</value>
+      <value>GL</value>
+      <value>GROUP</value>
+    </row>
+  </table>
+  <table name="tbl_lookup_lead_category">
+    <column>leadCategoryId</column>
+    <column>leadCategoryDescription</column>
+    <column>leadCategoryName</column>
+    <row>
+      <value>1</value>
+      <value><![CDATA[Lead Category Desc1]]></value>
+      <value>LC1</value>
+    </row>
+    <row>
+      <value>2</value>
+      <value><![CDATA[Lead Category Desc2]]></value>
+      <value>LC2</value>
+    </row>
+  </table>
+  <table name="tbl_lookup_lead_generator_code">
+    <column>leadGeneratorCodeId</column>
+    <column>leadGeneratorCodeName</column>
+    <row>
+      <value>1</value>
+      <value><![CDATA[Lead G1]]></value>
+    </row>
+    <row>
+      <value>2</value>
+      <value><![CDATA[Lead G2]]></value>
+    </row>
+  </table>
+  <table name="tbl_lookup_lead_status">
+    <column>leadStatusId</column>
+    <column>leadStatusDescription</column>
+    <column>leadStatusName</column>
+    <row>
+      <value>1</value>
+      <value><![CDATA[Lead Status Desc1]]></value>
+      <value><![CDATA[Lead Status 1]]></value>
+    </row>
+    <row>
+      <value>2</value>
+      <value><![CDATA[Lead Status Desc2]]></value>
+      <value><![CDATA[Lead Status 2]]></value>
+    </row>
+  </table>
+  <table name="tbl_lookup_lead_type">
+    <column>leadTypeId</column>
+    <column>leadTypeDescription</column>
+    <column>leadTypeName</column>
+    <row>
+      <value>1</value>
+      <value><![CDATA[Lead Type Desc]]></value>
+      <value><![CDATA[LT 1]]></value>
+    </row>
+    <row>
+      <value>2</value>
+      <value><![CDATA[Lead Type Desc2]]></value>
+      <value><![CDATA[LT 2]]></value>
+    </row>
+  </table>
+  <table name="tbl_lookup_task_type">
+    <column>taskTypeId</column>
+    <column>taskTypeDescription</column>
+    <column>taskTypeName</column>
+    <row>
+      <value>1</value>
+      <null/>
+      <value><![CDATA[Initial Meeting]]></value>
+    </row>
+    <row>
+      <value>2</value>
+      <null/>
+      <value><![CDATA[Final Meeting]]></value>
+    </row>
+  </table>
+  <table name="tbl_lookup_salutation">
+    <column>salutationId</column>
+    <column>salutationText</column>
+    <row>
+      <value>1</value>
+      <value>Mr</value>
+    </row>
+    <row>
+      <value>2</value>
+      <value>Mrs</value>
+    </row>
+    <row>
+      <value>3</value>
+      <value>Ms</value>
+    </row>
+  </table>
+  <table name="tbl_customer_details">
+    <column>customerDetailsId</column>
+    <column>annualIncome</column>
+    <column>bankAccountNumber</column>
+    <column>bankAccountType</column>
+    <column>bankNameBranch</column>
+    <column>coveredUnderPensionScheme</column>
+    <column>dateOfBirth</column>
+    <column>emailId</column>
+    <column>firstName</column>
+    <column>gender</column>
+    <column>identificationMarks</column>
+    <column>incomeProofSubmitted</column>
+    <column>landLineNumber</column>
+    <column>lastName</column>
+    <column>lengthOfService</column>
+    <column>middleName</column>
+    <column>mobileNumber</column>
+    <column>nationality</column>
+    <column>natureOfOccupation</column>
+    <column>natureOfWork</column>
+    <column>normalRetirementAge</column>
+    <column>panCard</column>
+    <column>pensionAnticipatedValue</column>
+    <column>pensionEmployeerScheme</column>
+    <column>pensionPersonalContribution</column>
+    <column>pensionRetirementAge</column>
+    <column>selfEmployedAnnualIncome</column>
+    <column>selfEmployedLabourDays</column>
+    <column>selfEmployedNatureOfWork</column>
+    <column>selfEmployedOccupation</column>
+    <column>selfEmployedProjectedWorkingLife</column>
+    <column>sourceOfIncome</column>
+    <column>educationalQualificationId</column>
+    <column>maritalStatusId</column>
+    <column>occupationId</column>
+    <column>salutationId</column>
+    <column>spouseId</column>
+    <row>
+      <value>1</value>
+      <value>12365489.00</value>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <value><![CDATA[2013-04-15 00:00:00.0]]></value>
+      <null/>
+      <value>Tom</value>
+      <value>1</value>
+      <null/>
+      <null/>
+      <null/>
+      <value>Harry</value>
+      <null/>
+      <value>Dick</value>
+      <value>9856321457</value>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <null/>
+      <value>1</value>
+      <null/>
+      <value>2</value>
+      <null/>
+    </row>
+  </table>
+  <table name="tbl_lead">
+    <column>leadId</column>
+    <column>appointmentScheduled</column>
+    <column>comments</column>
+    <column>createdDate</column>
+    <column>lifecycleState</column>
+    <column>modifiedDate</column>
+    <column>bdmCodeId</column>
+    <column>bmRmCodeId</column>
+    <column>branchCodeId</column>
+    <column>channelId</column>
+    <column>kindOfLeadId</column>
+    <column>leadCategoryId</column>
+    <column>customerDetailsId</column>
+    <column>leadGeneratorCodeId</column>
+    <column>leadStatusId</column>
+    <column>leadTypeId</column>
+    <column>taskTypeId</column>
+    <row>
+      <value>1</value>
+      <value><![CDATA[2013-06-23 00:00:00.0]]></value>
+      <value><![CDATA[Welcome to India First Life Insurance]]></value>
+      <value><![CDATA[2013-05-31 20:04:58.0]]></value>
+      <null/>
+      <value><![CDATA[2013-06-05 12:56:36.0]]></value>
+      <value>1</value>
+      <value>1</value>
+      <value>1</value>
+      <value>1</value>
+      <value>1</value>
+      <value>2</value>
+      <value>1</value>
+      <value>1</value>
+      <value>2</value>
+      <value>2</value>
+      <value>2</value>
+    </row>
+  </table>
+  <table name="tbl_policy">
+    <column>mbcpPolicyId</column>
+    <column>clientId</column>
+    <column>ifliBackendPolicyId</column>
+    <column>sumAssured</column>
+    <column>planId</column>
+    <column>premiumId</column>
+    <column>policyTypeId</column>
+    <column>premiumFrequencyId</column>
+    <column>payerId</column>
+    <column>leadId</column>
+  </table>
+  <table name="tbl_claims">
+    <column>claimId</column>
+    <column>isDeathCertifierDetailAvailable</column>
+    <column>isDeathDueToAnAccident</column>
+    <column>policyPossessor</column>
+    <column>wasHospitalized</column>
+    <column>claimStatusId</column>
+    <column>claimantId</column>
+    <column>policyId</column>
+  </table>
+  <table name="tbl_dependents">
+    <column>dependentId</column>
+    <column>dateOfBirth</column>
+    <column>firstName</column>
+    <column>gender</column>
+    <column>lastName</column>
+    <column>middleName</column>
+    <column>salutation</column>
+    <column>assuredPersonId</column>
+  </table>
+  <table name="tbl_lookup_document_type">
+    <column>documentTypeId</column>
+    <column>documentDescription</column>
+    <column>documentName</column>
+  </table>
+  <table name="tbl_documents">
+    <column>documentId</column>
+    <column>documentFileName</column>
+    <column>documentName</column>
+    <column>documentURL</column>
+    <column>documentTypeId</column>
+  </table>
+  <table name="tbl_proposal">
+    <column>proposalId</column>
+    <column>proposalDate</column>
+    <column>leadId</column>
+  </table>
+  <table name="tbl_group_proposal">
+    <column>proposalId</column>
+  </table>
+  <table name="tbl_dynamic_date">
+    <column>id</column>
+    <column>fieldName</column>
+    <column>value</column>
+    <column>proposalId</column>
+  </table>
+  <table name="tbl_dynamic_lookup">
+    <column>id</column>
+    <column>fieldName</column>
+    <column>lookupEntity</column>
+    <column>value</column>
+    <column>proposalId</column>
+  </table>
+  <table name="tbl_dynamic_numeric">
+    <column>id</column>
+    <column>fieldName</column>
+    <column>value</column>
+    <column>proposalId</column>
+  </table>
+  <table name="tbl_dynamic_text_gargantuan">
+    <column>id</column>
+    <column>fieldName</column>
+    <column>value</column>
+    <column>proposalId</column>
+  </table>
+  <table name="tbl_dynamic_text_large">
+    <column>id</column>
+    <column>fieldName</column>
+    <column>value</column>
+    <column>proposalId</column>
+  </table>
+  <table name="tbl_dynamic_text_normal">
+    <column>id</column>
+    <column>fieldName</column>
+    <column>value</column>
+    <column>proposalId</column>
+  </table>
+  <table name="tbl_dynamic_text_small">
+    <column>id</column>
+    <column>fieldName</column>
+    <column>value</column>
+    <column>proposalId</column>
+  </table>
+  <table name="tbl_existing_insurance">
+    <column>existingInsuranceId</column>
+    <column>annualPremium</column>
+    <column>sumAssured</column>
+    <column>planId</column>
+  </table>
+  <table name="tbl_family_dependent">
+    <column>pk_FamilyDependentID</column>
+    <column>created_by</column>
+    <column>created_date</column>
+    <column>familyDOB</column>
+    <column>familyFinanciallyDependent</column>
+    <column>familyGender</column>
+    <column>familyName</column>
+    <column>familyOccupation</column>
+    <column>familyRelationship</column>
+    <column>modified_by</column>
+    <column>modified_date</column>
+    <column>fK_CustomerDetailsID</column>
+  </table>
+  <table name="tbl_individual_proposal">
+    <column>isMedicalRequired</column>
+    <column>policyIssueDate</column>
+    <column>premiumAmount</column>
+    <column>signatureOfBDM</column>
+    <column>sumAssured</column>
+    <column>proposalId</column>
+    <column>planId</column>
+    <column>premiumFrequencyId</column>
+  </table>
+  <table name="tbl_lookup_document_proof">
+    <column>id</column>
+    <column>documentProofDescription</column>
+    <column>documentProofName</column>
+    <column>documentTypeId</column>
+  </table>
+  <table name="tbl_lookup_service_type">
+    <column>serviceTypeId</column>
+    <column>serviceTypeDescription</column>
+    <column>serviceTypeName</column>
+  </table>
+  <table name="tbl_mapping_assuredperson_address">
+    <column>assuredPersonId</column>
+    <column>customerAddressId</column>
+  </table>
+  <table name="tbl_mapping_claim_assuredpersons">
+    <column>claimId</column>
+    <column>assuredPersonId</column>
+  </table>
+  <table name="tbl_mapping_claim_documents">
+    <column>claimId</column>
+    <column>documentId</column>
+  </table>
+  <table name="tbl_mapping_leadcustomer_address">
+    <column>customerDetailsId</column>
+    <column>customerAddressId</column>
+    <row>
+      <value>1</value>
+      <value>1</value>
+    </row>
+  </table>
+  <table name="tbl_mapping_leadcustomer_children">
+    <column>customerDetailsId</column>
+    <column>childId</column>
+  </table>
+  <table name="tbl_mapping_leadcustomer_existinginsurance">
+    <column>customerDetailsId</column>
+    <column>existingInsuranceId</column>
+  </table>
+  <table name="tbl_parents">
+    <column>parentId</column>
+    <column>annualIncome</column>
+    <column>dateOfBirth</column>
+    <column>firstName</column>
+    <column>gender</column>
+    <column>lastName</column>
+    <column>middleName</column>
+    <column>natureOfOccupation</column>
+    <column>panCard</column>
+    <column>salutation</column>
+    <column>sourceOfIncome</column>
+    <column>maritalStatusId</column>
+    <column>occupationId</column>
+    <column>relationshipId</column>
+    <column>personTypeId</column>
+  </table>
+  <table name="tbl_mapping_leadcustomer_parents">
+    <column>customerDetailsId</column>
+    <column>parentId</column>
+  </table>
+  <table name="tbl_needs_analysis">
+    <column>needsAnalysisId</column>
+    <column>annualAffordableContribution</column>
+    <column>annualContributionIncrement</column>
+    <column>appetite</column>
+    <column>commitmentDetails</column>
+    <column>dateOfAnalysis</column>
+    <column>desirableAnnualPension</column>
+    <column>desirableHealthCover</column>
+    <column>desirableLifeCover</column>
+    <column>lifeStage</column>
+    <column>linkToBDMSignature</column>
+    <column>linkToCustomerSignature</column>
+    <column>protectionNeeds</column>
+    <column>returnOnInvestments</column>
+    <column>riskElementExplanation</column>
+    <column>yearsOfContribtion</column>
+    <column>leadId</column>
+  </table>
+  <table name="tbl_mapping_needsanalysis_insuranceplans">
+    <column>needsAnalysisId</column>
+    <column>planId</column>
+  </table>
+  <table name="tbl_mapping_policy_assuredpersons">
+    <column>policyId</column>
+    <column>assuredPersonId</column>
+  </table>
+  <table name="tbl_mapping_policy_documents">
+    <column>policyId</column>
+    <column>documentId</column>
+  </table>
+  <table name="tbl_mapping_proposal_assuredpersons">
+    <column>proposalId</column>
+    <column>assuredPersonId</column>
+  </table>
+  <table name="tbl_mapping_proposal_documents">
+    <column>proposalId</column>
+    <column>documentId</column>
+  </table>
+  <table name="tbl_service_requests">
+    <column>mbcpServiceRequestId</column>
+    <column>customerSignature</column>
+    <column>serviceComments</column>
+    <column>serviceTypeId</column>
+    <column>policyId</column>
+  </table>
+  <table name="tbl_mapping_servicerequest_documents">
+    <column>serviceRequestId</column>
+    <column>documentId</column>
+  </table>
+  <table name="tbl_nominee">
+    <column>nomineeId</column>
+    <column>dateOfBirth</column>
+    <column>firstName</column>
+    <column>gender</column>
+    <column>lastName</column>
+    <column>middleName</column>
+    <column>panCard</column>
+    <column>percentageOfEntitlement</column>
+    <column>salutation</column>
+    <column>relationshipId</column>
+    <column>policyId</column>
+  </table>
+</dataset>

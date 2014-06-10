@@ -1,0 +1,166 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.ifli.mbcp</groupId>
+		<artifactId>mbcp</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId>mbcp-beans</artifactId>
+	<version>1.0</version>
+	<packaging>jar</packaging>
+
+	<name>Magic Board Customer Portal - Domain Objects</name>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>hibernate3-maven-plugin</artifactId>
+					<version>2.2</version>
+					<configuration>
+						<components>
+							<component>
+								<name>hbm2ddl</name>
+								<implementation>annotationconfiguration</implementation>
+							</component>
+						</components>
+						<componentProperties>
+							<drop>false</drop>
+							<create>false</create> <!-- False to drop & then create -->
+							<export>true</export> <!-- True to force db schema creation -->
+							<format>true</format>
+							<outputfilename>${project.artifactId}-schema-${project.version}.sql</outputfilename>
+							<propertyfile>${project.build.directory}/classes/jdbc.properties</propertyfile>
+						</componentProperties>
+					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>${jdbc.groupId}</groupId>
+							<artifactId>${jdbc.artifactId}</artifactId>
+							<version>${jdbc.version}</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>dbunit-maven-plugin</artifactId>
+					<version>1.0-beta-3</version>
+					<configuration>
+						<dataTypeFactoryName>${dbunit.dataTypeFactoryName}</dataTypeFactoryName>
+						<driver>${jdbc.driverClassName}</driver>
+						<username>${jdbc.username}</username>
+						<password>${jdbc.password}</password>
+						<url>${jdbc.url}</url>
+						<src>src/test/resources/sample-data.xml</src>
+						<type>CLEAN_INSERT</type>
+						<transaction>true</transaction>
+						<format>xml</format>
+						<ordered>true</ordered>
+					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>${jdbc.groupId}</groupId>
+							<artifactId>${jdbc.artifactId}</artifactId>
+							<version>${jdbc.version}</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>ejb3-persistence</artifactId>
+			<version>1.0.1.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.3.1.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>${jdbc.groupId}</groupId>
+			<artifactId>${jdbc.artifactId}</artifactId>
+			<version>${jdbc.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${jdbcTest.groupId}</groupId>
+			<artifactId>${jdbcTest.artifactId}</artifactId>
+			<version>${jdbcTest.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>3.0.0.GA</version>
+		</dependency>
+		<!-- <dependency>
+		    <groupId>org.modelmapper</groupId>
+		    <artifactId>modelmapper-parent</artifactId>
+		    <version>0.5.7-SNAPSHOT</version>
+	    </dependency> -->
+       <dependency>
+	     <groupId>org.modelmapper</groupId>
+	        <artifactId>modelmapper</artifactId>
+	        <version>0.5.1</version>
+         </dependency> 
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>java.net</id>
+			<url>http://download.java.net/maven/2/</url>
+		</repository>
+	</repositories>
+	<properties>
+		<jdbcTest.groupId>${jdbc.groupId}</jdbcTest.groupId>
+		<jdbcTest.artifactId>${jdbc.artifactId}</jdbcTest.artifactId>
+		<jdbcTest.version>${jdbc.version}</jdbcTest.version>
+		<jdbcTest.driverClassName>${jdbc.driverClassName}</jdbcTest.driverClassName>
+		<jdbcTest.url>${jdbc.url}</jdbcTest.url>
+		<jdbcTest.username>${jdbc.username}</jdbcTest.username>
+		<jdbcTest.password>${jdbc.password}</jdbcTest.password>
+		<hibernateTest.dialect>${hibernate.dialect}</hibernateTest.dialect>
+		<hibernateTest.showSQL>true</hibernateTest.showSQL>
+		<hibernateTest.createTables>create</hibernateTest.createTables>
+		<dbunitTest.dataTypeFactoryName>${dbunit.dataTypeFactoryName}</dbunitTest.dataTypeFactoryName>
+		<!-- <jdbcTest.groupId>hsqldb</jdbcTest.groupId> <jdbcTest.artifactId>hsqldb</jdbcTest.artifactId> 
+			<jdbcTest.version>1.8.0.10</jdbcTest.version> <jdbcTest.driverClassName>org.hsqldb.jdbcDriver</jdbcTest.driverClassName> 
+			<jdbcTest.url>jdbc:hsqldb:file:${project.basedir}/target/db/db_mbcp_test;shutdown=true</jdbcTest.url> 
+			<jdbcTest.username>sa</jdbcTest.username> <jdbcTest.password></jdbcTest.password> 
+			<hibernateTest.dialect>org.hibernate.dialect.HSQLDialect</hibernateTest.dialect> 
+			<hibernateTest.showSQL>true</hibernateTest.showSQL> <hibernateTest.createTables>create</hibernateTest.createTables> 
+			<dbunitTest.dataTypeFactoryName>org.dbunit.ext.hsqldb.HsqldbDataTypeFactory</dbunitTest.dataTypeFactoryName> -->
+		<dbunit.operation.type>CLEAN_INSERT</dbunit.operation.type>
+	</properties>
+</project>

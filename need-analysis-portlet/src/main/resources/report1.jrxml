@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Heading 3" fontSize="14" isBold="true"/>
+	<style name="Heading 1" fontSize="16" isBold="true"/>
+	<style name="Text Body"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#000000">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1"/>
+	<subDataset name="dataset1"/>
+	<parameter name="IFLI_LOGO" class="java.lang.String"/>
+	<parameter name="IFLI_LOGO1" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="dateOfBirth" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="maritalStatus" class="java.lang.String"/>
+	<field name="leadCustomerDetails.annualIncome" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="46" splitType="Stretch">
+			<image>
+				<reportElement x="14" y="0" width="99" height="45"/>
+				<imageExpression><![CDATA[$P{IFLI_LOGO}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement  x="144" y="0" width="215" height="45"/>
+				<imageExpression><![CDATA[$P{IFLI_LOGO1}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="388" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Reference Number :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="13" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+$P{IFLI_LOGO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="199" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[""+$P{IFLI_LOGO1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="183" y="0" width="175" height="23"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Need Analysis Form]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="627" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="20" backcolor="#5C5C5C"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="14" y="40" width="65" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of Birth:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="60" width="79" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Annual Income:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="20" width="39" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="83" width="555" height="20" backcolor="#5C5C5C"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="83" width="256" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<text><![CDATA[Affordable Contribution - Current and Feature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="40" width="79" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Maritial Status:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="40" width="66" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gender:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="103" width="158" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Annual Affordable Contribution:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="123" width="158" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desired Years of Contribution:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="143" width="201" height="15"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Incremental Contribution Every Year (%): ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="158" width="555" height="20" backcolor="#5C5C5C"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="14" y="158" width="140" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Desired Insurance Needs]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="181" width="158" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Life Insurance(Death / Maturity):]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="203" width="90" height="14"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Health Insurance:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="228" width="169" height="15"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saving and Investment Planning:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="252" width="90" height="15"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pension Planning:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="276" width="555" height="20" backcolor="#5C5C5C"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="14" y="276" width="158" height="20" forecolor="#FFFFFF"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Existing Insurance Plan details ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="304" width="66" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plan Name: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="323" width="90" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Annual Premium :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="342" width="80" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sum Assured :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="0" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<text><![CDATA[Prospects Details]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="367" width="555" height="20" backcolor="#5C5C5C"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="12" y="367" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<text><![CDATA[Recomendation]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="418" width="554" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="14" y="404" width="100" height="14"/>
+				<textElement/>
+				<text><![CDATA[1   Life Stage ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="429" width="100" height="13"/>
+				<textElement/>
+				<text><![CDATA[2   Protection Needs]]></text>
+			</staticText>
+			<line>
+				<reportElement x="299" y="393" width="1" height="145"/>
+			</line>
+			<line>
+				<reportElement x="0" y="393" width="555" height="1"/>
+			</line>
+			<line>
+				<reportElement x="0" y="394" width="1" height="144"/>
+			</line>
+			<line>
+				<reportElement x="555" y="393" width="1" height="145"/>
+			</line>
+			<staticText>
+				<reportElement x="14" y="447" width="92" height="14"/>
+				<textElement/>
+				<text><![CDATA[3   Appetite]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="464" width="255" height="19"/>
+				<textElement/>
+				<text><![CDATA[4   Plan Recommended, Including Name of Insurer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="483" width="275" height="15"/>
+				<textElement/>
+				<text><![CDATA[5   Detail of Commitment for the Current and Feture Years]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="502" width="222" height="13"/>
+				<textElement/>
+				<text><![CDATA[6   Risk Element Explained]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="521" width="554" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="14" y="525" width="285" height="13"/>
+				<textElement/>
+				<text><![CDATA[7   Why you think this policy is most suited for the prospect]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="538" width="555" height="2"/>
+			</line>
+			<staticText>
+				<reportElement x="12" y="543" width="167" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Agent/Broker's Certification]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="556" width="219" height="46"/>
+				<textElement/>
+				<text><![CDATA[   I/We hereby certify that I/We believe that the products recommended by me/us
+mentioned above is suitable for the prospects based on the information submitted by him/her as recomended above]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="612" width="135" height="15"/>
+				<textElement/>
+				<text><![CDATA[Agent/Broker's Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="539" width="298" height="63"/>
+				<textElement/>
+				<text><![CDATA[    The above recommendation is based on the information provided by me.
+    I have been explained About the features of the product and believe it would be suited for me based on my insurance Needs and financial objectives]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="610" width="129" height="17"/>
+				<textElement/>
+				<text><![CDATA[Signature of prospects]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="299" width="553" height="1"/>
+			</line>
+			<line>
+				<reportElement x="555" y="296" width="1" height="71"/>
+			</line>
+			<line>
+				<reportElement x="2" y="362" width="553" height="1"/>
+			</line>
+			<line>
+				<reportElement x="4" y="299" width="1" height="63"/>
+			</line>
+			<line>
+				<reportElement x="4" y="341" width="551" height="1"/>
+			</line>
+			<line>
+				<reportElement x="317" y="300" width="1" height="62"/>
+			</line>
+			<textField>
+				<reportElement x="54" y="20" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="83" y="40" width="89" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{dateOfBirth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="251" y="40" width="83" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{maritalStatus}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="40" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="60" width="197" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{leadCustomerDetails.annualIncome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

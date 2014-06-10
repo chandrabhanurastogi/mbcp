@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="createServiceRequest" class="org.springframework.remoting.jaxws.JaxWsPortProxyFactoryBean">
+        <property name="serviceInterface" value="com.ifli.mbcp.service.remote.ServiceSoap"/>
+        <property name="wsdlDocumentUrl" value="http://220.226.102.236/PivotalCSMSSDK/Service.asmx?WSDL"/>
+        <property name="namespaceUri" value="http://www.CDCCRM.com/webservices/"/>
+        <property name="serviceName" value="Service"/>
+        <property name="portName" value="ServiceSoap"/>
+    </bean>
+	<bean id="serviceRequestWSClient" class="com.ifli.mbcp.service.remote.ServiceRequestWSClient">
+	   <property name="createService" ref="createServiceRequest"/>
+	</bean>
+</beans>

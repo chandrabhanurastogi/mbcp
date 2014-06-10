@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<!-- Mapping specific to UpdateLead Action Start -->
+
+	<mapping map-null="false" wildcard="true" map-id="getUpdateLead">
+		<class-a>com.ifli.mbcp.domain.Lead</class-a>
+		<class-b>com.ifli.mbcp.vo.LeadVO</class-b>
+		<field relationship-type="non-cumulative">
+			<a>proposalsMade</a>
+			<b>proposalsMade</b>
+		</field>
+		<field map-id="updateLead-CustDetails">
+			<a>leadCustomerDetails</a>
+			<b>leadCustomerDetails</b>
+		</field>
+		<field-exclude>
+			<a>needsAnalysis</a>
+			<b>needsAnalysis</b>
+		</field-exclude>
+		<field-exclude>
+			<a>purchasedPolicies</a>
+			<b>purchasedPolicies</b>
+		</field-exclude>
+	</mapping>
+
+	<mapping map-null="false" wildcard="false" map-id="updateLead">
+		<class-a>com.ifli.mbcp.domain.Lead</class-a>
+		<class-b>com.ifli.mbcp.vo.LeadVO</class-b>
+		<field-exclude>
+			<a>proposalsMade</a>
+			<b>proposalsMade</b>
+		</field-exclude>
+		<field map-id="updateLead-CustDetails">
+			<a>leadCustomerDetails</a>
+			<b>leadCustomerDetails</b>
+		</field>
+		<field>
+			<a>appointmentScheduled</a>
+			<b>appointmentScheduled</b>
+		</field>
+		<field>
+			<a>comments</a>
+			<b>comments</b>
+		</field>
+		<!-- <field > <a>taskType</a> <b>taskType</b> </field> -->
+	</mapping>
+
+
+	<mapping map-null="false" wildcard="false" map-id="updateLead-CustDetails">
+		<class-a>com.ifli.mbcp.domain.CustomerDetails</class-a>
+		<class-b>com.ifli.mbcp.vo.CustomerDetailsVO</class-b>
+		<field relationship-type="non-cumulative">
+			<a>customerAddress</a>
+			<b>customerAddress</b>
+		</field>
+		<field>
+			<a>customerDetailsId</a>
+			<b>customerDetailsId</b>
+		</field>
+		<field>
+			<a>mobileNumber</a>
+			<b>mobileNumber</b>
+		</field>
+		<field>
+			<a>firstName</a>
+			<b>firstName</b>
+		</field>
+
+		<field>
+			<a>middleName</a>
+			<b>middleName</b>
+		</field>
+		<field>
+			<a>lastName</a>
+			<b>lastName</b>
+		</field>
+
+		<field>
+			<a>gender</a>
+			<b>gender</b>
+		</field>
+	</mapping>
+
+	<!-- Mapping specific to UpdateLead Action End -->
+
+	<!-- Mapping specific to createLead Action End -->
+
+	<mapping map-null="false" map-id="createLead">
+		<class-a>com.ifli.mbcp.vo.LeadVO</class-a>
+		<class-b>com.ifli.mbcp.domain.Lead</class-b>
+
+		<field-exclude>
+			<a>proposalsMade</a>
+			<b>proposalsMade</b>
+		</field-exclude>
+
+	</mapping>
+	<!-- Mapping specific to createLead Action End -->
+
+	<!-- Generic Mapping Start -->
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.vo.CustomerDetailsVO</class-a>
+		<class-b>com.ifli.mbcp.domain.CustomerDetails</class-b>
+		<field relationship-type="non-cumulative">
+			<a>customerAddress</a>
+			<b>customerAddress</b>
+		</field>
+	</mapping>
+
+	<mapping map-null="false">
+		<class-a>com.ifli.mbcp.domain.NeedsAnalysis</class-a>
+		<class-b>com.ifli.mbcp.vo.NeedsAnalysisVO</class-b>
+	</mapping>
+	<!-- Generic Mapping End -->
+</mappings>

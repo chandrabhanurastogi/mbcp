@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+
+<portlet-app version="2.0"
+	xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+	<portlet>
+		<portlet-name>leadGenerationPortlet-Individual</portlet-name>
+		<display-name>Lead Generation Portlet - Individual</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/spring/leadGenerationPortlet-Individual-context.xml</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Lead Generation Portlet - Individual</title>
+			<short-title>Lead Generation Portlet - Individual</short-title>
+			<keywords>Lead Generation Portlet - Individual</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>selectedLeadId</supported-public-render-parameter>
+	</portlet>
+
+	<portlet>
+		<portlet-name>leadGenerationPortlet-Group</portlet-name>
+		<display-name>Lead Generation Portlet - Group</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/spring/leadGenerationPortlet-Group-context.xml</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Lead Generation Portlet - Group</title>
+			<short-title>Lead Generation Portlet - Group</short-title>
+			<keywords>Lead Generation Portlet - Group</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>selectedLeadId</supported-public-render-parameter>
+	</portlet>
+
+	<portlet>
+		<portlet-name>leadSearchPortlet</portlet-name>
+		<display-name>Lead Search Portlet</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/spring/leadSearchPortlet-context.xml</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Lead Search Portlet</title>
+			<short-title>Lead Search Portlet</short-title>
+			<keywords>Lead Search Portlet</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>selectedLeadId</supported-public-render-parameter>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>leadRestPortlet</portlet-name>
+		<display-name>Lead Rest Portlet</display-name>
+		<portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+		<init-param>
+			<name>contextConfigLocation</name>
+			<value>/WEB-INF/spring/leadRestPortlet-context.xml</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-info>
+			<title>Lead Rest Portlet</title>
+			<short-title>Lead Rest Portlet</short-title>
+			<keywords>Lead Rest Portlet</keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+	</portlet>
+
+	<public-render-parameter>
+		<description>Shares the Selected Lead Id in Search results with Other
+			Portlets Interested in this
+		</description>
+		<identifier>selectedLeadId</identifier>
+		<qname xmlns:x="http://www.ifli.com/mbcp/public-render-parameters">x:selectedLeadId</qname>
+	</public-render-parameter>
+</portlet-app>

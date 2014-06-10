@@ -1,0 +1,85 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	    <!-- Start of LookUp Objects -->
+		<mapping class="com.ifli.mbcp.domain.BMRMCode"/>
+		<mapping class="com.ifli.mbcp.domain.BDMCode"/>
+		<mapping class="com.ifli.mbcp.domain.BranchCode"/>
+		<mapping class="com.ifli.mbcp.domain.Channel"/>
+		<mapping class="com.ifli.mbcp.domain.City"/>
+		<mapping class="com.ifli.mbcp.domain.ClaimStatus"/>
+		<mapping class="com.ifli.mbcp.domain.InsurancePlan"/>
+		<mapping class="com.ifli.mbcp.domain.Language"/>
+		<mapping class="com.ifli.mbcp.domain.MaritalStatus"/>
+		<mapping class="com.ifli.mbcp.domain.PremiumFrequency"/>
+		<mapping class="com.ifli.mbcp.domain.Relationship"/>
+		<mapping class="com.ifli.mbcp.domain.State"/>
+		<mapping class="com.ifli.mbcp.domain.Salutation"/>
+		<mapping class="com.ifli.mbcp.domain.TaskType"/>
+		<mapping class="com.ifli.mbcp.domain.PolicyType"/>
+		<mapping class="com.ifli.mbcp.domain.ServiceType"/>
+		<!-- End of LookUp Objects -->
+		
+		<!-- Start of Lead  and it's Dependent objects -->
+		<mapping class="com.ifli.mbcp.domain.Person"/>
+		<mapping class="com.ifli.mbcp.domain.AssuredPerson"/>
+		
+		<mapping class="com.ifli.mbcp.domain.CustomerDetails"/>
+		<mapping class="com.ifli.mbcp.domain.CustomerAddress"/>
+		<mapping class="com.ifli.mbcp.domain.ExistingInsurance"/>
+		<mapping class="com.ifli.mbcp.domain.Lead"/>
+		<mapping class="com.ifli.mbcp.domain.KindOfLead"/>
+		<mapping class="com.ifli.mbcp.domain.LeadGeneratorCode"/>
+		<mapping class="com.ifli.mbcp.domain.LeadStatus"/>
+		<mapping class="com.ifli.mbcp.domain.LeadCategory"/>
+		<mapping class="com.ifli.mbcp.domain.LeadType"/>
+		<mapping class="com.ifli.mbcp.domain.NeedsAnalysis"/>
+		<mapping class="com.ifli.mbcp.domain.FamilyDependent"/>
+		<mapping class="com.ifli.mbcp.domain.Nominee"/>
+		<mapping class="com.ifli.mbcp.domain.PlanType"/>
+		<mapping class="com.ifli.mbcp.domain.ExistingInsurance"/>
+		<mapping class="com.ifli.mbcp.domain.FamilyDependent"/>
+		<mapping class="com.ifli.mbcp.domain.Proposal"/>
+		<mapping class="com.ifli.mbcp.domain.AudioVideo"/>
+		<mapping class="com.ifli.mbcp.domain.DocumentType"/>
+		<mapping class="com.ifli.mbcp.domain.DocumentProof"/>
+		<mapping class="com.ifli.mbcp.domain.AddressType"/>
+		<mapping class="com.ifli.mbcp.domain.PersonType"/>
+		<mapping class="com.ifli.mbcp.domain.DynamicTextSmall"/>
+		<mapping class="com.ifli.mbcp.domain.DynamicNumeric"/>
+		<mapping class="com.ifli.mbcp.domain.DynamicDate"/>
+		<mapping class="com.ifli.mbcp.domain.DynamicTextSmall"/>
+		<mapping class="com.ifli.mbcp.domain.DynamicTextNormal"/>
+		<mapping class="com.ifli.mbcp.domain.DynamicTextLarge"/>
+		<mapping class="com.ifli.mbcp.domain.DynamicTextGargantuan"/>
+		<mapping class="com.ifli.mbcp.domain.DynamicLookup"/>
+	    <mapping class="com.ifli.mbcp.domain.IndividualProposal"/>
+		<mapping class="com.ifli.mbcp.domain.GroupProposal"/>
+		<!-- End of Lead  and it's Dependent objects -->
+		
+		<!-- Start of Payment and it's Dependent objects -->
+		<mapping class="com.ifli.mbcp.domain.PaymentType"/>
+		<mapping class="com.ifli.mbcp.domain.Premium"/>
+		<!-- End of Payment and it's Dependent objects -->
+		
+		<mapping class="com.ifli.mbcp.domain.LTRF"/>
+		<mapping class="com.ifli.mbcp.domain.MBCPDocument"/>
+		<mapping class="com.ifli.mbcp.domain.Policy"/>
+		<mapping class="com.ifli.mbcp.domain.Claim"/>
+		<mapping class="com.ifli.mbcp.domain.ClaimantPerson"/>
+		<mapping class="com.ifli.mbcp.domain.ServiceRequest"/>
+		
+		<mapping class="com.ifli.mbcp.domain.EducationalQualifications"/>
+		<mapping class="com.ifli.mbcp.domain.Occupation"/>
+		<mapping class="com.ifli.mbcp.domain.Spouse"/>
+		<mapping class="com.ifli.mbcp.domain.Child"/>
+		<mapping class="com.ifli.mbcp.domain.Parent"/>
+		<mapping class="com.ifli.mbcp.domain.DependentPerson"/>
+		<mapping class="com.ifli.mbcp.domain.PremiumPayer"/>
+		
+		
+		
+	</session-factory>
+</hibernate-configuration>
